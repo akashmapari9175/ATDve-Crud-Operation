@@ -26,6 +26,7 @@ public class StudentController {
     @GetMapping("/{id}")
     public ResponseEntity<Student> findById(@PathVariable Long id) {
        Student result = studentService.findById(id);
+       System.out.println("for check");
         return new ResponseEntity<>(result,HttpStatus.OK);
     }
 
